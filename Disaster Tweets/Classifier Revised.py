@@ -9,7 +9,10 @@ from transformers import BertTokenizer, BertForSequenceClassification, AdamW, ge
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 import warnings
 
-warnings.filterwarnings("ignore", category=UserWarning, message="1Torch was not compiled with flash attention.")
+warnings.filterwarnings("ignore", 
+                        category=UserWarning, 
+                        message="1Torch was not compiled with flash attention."
+                       )
 
 df_train = pd.read_csv('train.csv')
 df_test = pd.read_csv('test.csv')
